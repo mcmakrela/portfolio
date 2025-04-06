@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kacper Wissuwa Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+        display: flex;
+      }
+      aside {
+        background-color: #fff;
+        border-right: 1px solid #dee2e6;
+        width: 220px;
+        padding: 2rem 1rem;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+        height: 100vh;
+        position: fixed;
+      }
+      aside img {
+        width: 60px;
+        display: block;
+        margin: 0 auto 1rem auto;
+      }
+      aside h1 {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      aside nav a {
+        display: block;
+        color: #495057;
+        text-decoration: none;
+        margin: 1rem 0;
+        text-align: center;
+      }
+      .language-switcher {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .language-switcher button {
+        margin: 0 5px;
+        padding: 0.3rem 0.6rem;
+        background: #e9ecef;
+        border: none;
+        color: #495057;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      main {
+        margin-left: 220px;
+        padding: 2rem;
+        flex: 1;
+      }
+      .section {
+        max-width: 900px;
+        margin-bottom: 3rem;
+      }
+      .videos iframe {
+        width: 100%;
+        height: 315px;
+        margin-bottom: 2rem;
+      }
+      .contact a {
+        color: #0d6efd;
+        text-decoration: underline;
+      }
+      footer {
+        font-size: 0.9rem;
+        color: #adb5bd;
+        text-align: center;
+        padding: 2rem 0;
+      }
+    </style>
+    <script>
+      const translations = {
+        en: {
+          about: "About Me",
+          aboutText: "Kacper Wissuwa is a filmmaker focused on creative visual storytelling through documentary, music video, and experimental film. His work blends social observation, cinematic aesthetics, and real human narratives.",
+          films: "Selected Works",
+          contact: "Contact",
+          email: "Email:",
+          instagram: "Instagram:",
+          collab: "Collaboration",
+          collabText: "Open to collaborations with artists, brands, NGOs, and creative teams. Whether you're looking to co-create a music video, document a cause, or bring a bold visual concept to life—let's connect."
+        },
+        de: {
+          about: "Über mich",
+          aboutText: "Kacper Wissuwa ist ein Filmemacher mit Schwerpunkt auf dokumentarischem Erzählen, Musikvideos und experimentellem Film. Seine Arbeiten verbinden soziale Beobachtung mit filmischer Ästhetik und echten menschlichen Geschichten.",
+          films: "Ausgewählte Werke",
+          contact: "Kontakt",
+          email: "E-Mail:",
+          instagram: "Instagram:",
+          collab: "Zusammenarbeit",
+          collabText: "Offen für Zusammenarbeit mit Künstlern, Marken, NGOs und kreativen Teams. Ob Musikvideo, soziales Projekt oder visuelle Idee – melde dich gern."
+        },
+        pl: {
+          about: "O mnie",
+          aboutText: "Kacper Wissuwa to filmowiec skupiający się na opowiadaniu historii poprzez dokument, teledyski i formy eksperymentalne. W jego filmach łączą się obserwacja społeczna, filmowy styl i autentyczne ludzkie doświadczenia.",
+          films: "Wybrane filmy",
+          contact: "Kontakt",
+          email: "E-mail:",
+          instagram: "Instagram:",
+          collab: "Współpraca",
+          collabText: "Otwarty na współpracę z artystami, markami, organizacjami i zespołami twórczymi. Teledysk, reportaż czy projekt społeczny? – odezwij się."
+        }
+      };
+      function setLanguage(lang) {
+        document.getElementById("aboutTitle").innerText = translations[lang].about;
+        document.getElementById("aboutText").innerText = translations[lang].aboutText;
+        document.getElementById("filmsTitle").innerText = translations[lang].films;
+        document.getElementById("contactTitle").innerText = translations[lang].contact;
+        document.getElementById("emailLabel").innerText = translations[lang].email;
+        document.getElementById("instagramLabel").innerText = translations[lang].instagram;
+        document.getElementById("collabTitle").innerText = translations[lang].collab;
+        document.getElementById("collabText").innerText = translations[lang].collabText;
+      }
+    </script>
+  </head>
+  <body onload="setLanguage('en')">
+    <aside>
+      <img src="logo.png" alt="Kacper Wissuwa Logo" />
+      <h1>Kacper Wissuwa</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#films">Films</a>
+        <a href="#collab">Collab</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('de')">DE</button>
+        <button onclick="setLanguage('pl')">PL</button>
+      </div>
+    </aside>
+
+    <main>
+      <section class="section" id="about">
+        <h2 id="aboutTitle">About Me</h2>
+        <p id="aboutText">Kacper Wissuwa is a filmmaker focused on creative visual storytelling through documentary, music video, and experimental film. His work blends social observation, cinematic aesthetics, and real human narratives.</p>
+      </section>
+
+      <section class="section videos" id="films">
+        <h2 id="filmsTitle">Selected Works</h2>
+        <iframe src="https://www.youtube.com/embed/WtEnBBXxVfw" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/K4Wk8o1QUlk" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/lOG8TXqRmkM" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Uhp64cfyYXM" frameborder="0" allowfullscreen></iframe>
+      </section>
+
+      <section class="section" id="collab">
+        <h2 id="collabTitle">Collaboration</h2>
+        <p id="collabText">Open to collaborations with artists, brands, NGOs, and creative teams. Whether you're looking to co-create a music video, document a cause, or bring a bold visual concept to life—let's connect.</p>
+      </section>
+
+      <section class="section contact" id="contact">
+        <h2 id="contactTitle">Contact</h2>
+        <p><span id="emailLabel">Email:</span> <a href="mailto:kacper.wissuwa@videouberwacht.com">kacper.wissuwa@videouberwacht.com</a></p>
+        <p><span id="instagramLabel">Instagram:</span> <a href="https://instagram.com/mcmakrela" target="_blank">@mcmakrela</a></p>
+      </section>
+
+      <footer>
+        &copy; 2025 Kacper Wissuwa. All rights reserved.
+      </footer>
+    </main>
+  </body>
+</html>
