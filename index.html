@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kacper Wissuwa Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #111;
+        color: #f5f5f5;
+      }
+      header {
+        background: #000;
+        padding: 2rem;
+        text-align: center;
+      }
+      header img {
+        width: 80px;
+        margin-bottom: 1rem;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      nav {
+        margin-top: 1rem;
+      }
+      nav a {
+        color: #ccc;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .language-switcher {
+        margin-top: 1rem;
+      }
+      .language-switcher button {
+        margin: 0 5px;
+        padding: 0.3rem 0.6rem;
+        background: #333;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+      .section {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .videos iframe {
+        width: 100%;
+        height: 315px;
+        margin-bottom: 2rem;
+      }
+      .contact a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: #777;
+      }
+    </style>
+    <script>
+      const translations = {
+        en: {
+          about: "About Me",
+          aboutText: "Born in Warsaw in 2001, Kacper Wissuwa began his creative journey with LEGO animations, progressing into music videos and commercial content. His true passion lies in documentary filmmaking, which has taken him to Tbilisi and New York City, capturing stories that reveal cultural diversity and complex human emotions. Kacper explores raw human experiences, controversial topics, and the quiet beauty of real life—always through an unfiltered lens.",
+          films: "Selected Works",
+          contact: "Contact",
+          email: "Email:",
+          instagram: "Instagram:"
+        },
+        de: {
+          about: "Über mich",
+          aboutText: "Geboren 2001 in Warschau, begann Kacper Wissuwa seine kreative Reise mit LEGO-Animationen und entwickelte sich schnell weiter zu Musikvideos und Werbefilmen. Seine wahre Leidenschaft fand er im Dokumentarfilm, der ihn nach Tiflis und New York City führte, wo er Geschichten einfängt, die kulturelle Vielfalt und menschliche Emotionen zeigen. Kacper beleuchtet menschliche Erfahrungen, kontroverse Themen und die stille Schönheit des echten Lebens – immer durch ein ungeschöntes Objektiv.",
+          films: "Ausgewählte Werke",
+          contact: "Kontakt",
+          email: "E-Mail:",
+          instagram: "Instagram:"
+        },
+        pl: {
+          about: "O mnie",
+          aboutText: "Urodzony w Warszawie w 2001 roku, Kacper Wissuwa rozpoczął swoją twórczą drogę od animacji LEGO, rozwijając się w kierunku teledysków i reklam. Jego prawdziwą pasją są filmy dokumentalne, które zaprowadziły go do Tbilisi i Nowego Jorku, gdzie uchwycił opowieści ukazujące różnorodność kulturową i ludzkie emocje. Kacper bada ludzkie doświadczenia, kontrowersyjne tematy i piękno życia – zawsze przez niefiltrowany obiektyw.",
+          films: "Wybrane filmy",
+          contact: "Kontakt",
+          email: "E-mail:",
+          instagram: "Instagram:"
+        }
+      };
+      function setLanguage(lang) {
+        document.getElementById("aboutTitle").innerText = translations[lang].about;
+        document.getElementById("aboutText").innerText = translations[lang].aboutText;
+        document.getElementById("filmsTitle").innerText = translations[lang].films;
+        document.getElementById("contactTitle").innerText = translations[lang].contact;
+        document.getElementById("emailLabel").innerText = translations[lang].email;
+        document.getElementById("instagramLabel").innerText = translations[lang].instagram;
+      }
+    </script>
+  </head>
+  <body onload="setLanguage('en')">
+    <header>
+      <img src="logo.svg" alt="Kacper Wissuwa Logo" />
+      <h1>Kacper Wissuwa</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#films">Films</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('de')">DE</button>
+        <button onclick="setLanguage('pl')">PL</button>
+      </div>
+    </header>
+
+    <section class="section" id="about">
+      <h2 id="aboutTitle">About Me</h2>
+      <p id="aboutText"></p>
+    </section>
+
+    <section class="section videos" id="films">
+      <h2 id="filmsTitle">Selected Works</h2>
+      <iframe src="https://www.youtube.com/embed/WtEnBBXxVfw" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/K4Wk8o1QUlk" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/lOG8TXqRmkM" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Uhp64cfyYXM" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section class="section contact" id="contact">
+      <h2 id="contactTitle">Contact</h2>
+      <p><span id="emailLabel">Email:</span> <a href="mailto:kacper.wissuwa@videouberwacht.com">kacper.wissuwa@videouberwacht.com</a></p>
+      <p><span id="instagramLabel">Instagram:</span> <a href="https://instagram.com/mcmakrela" target="_blank">@mcmakrela</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 Kacper Wissuwa. All rights reserved.
+    </footer>
+  </body>
+</html>
